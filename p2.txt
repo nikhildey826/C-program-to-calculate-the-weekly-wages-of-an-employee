@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float wagesPerHour, hoursWorked, weeklyWages;
+
+    printf("Enter the wages per hour: ");
+    scanf("%f", &wagesPerHour);
+
+    printf("Enter the number of hours worked: ");
+    scanf("%f", &hoursWorked);
+
+    if (hoursWorked <= 30) {
+        weeklyWages = wagesPerHour * hoursWorked;
+    } else {
+        weeklyWages = (30 * wagesPerHour) + ((hoursWorked - 30) * (2 * wagesPerHour));
+    }
+
+    printf("Weekly Wages: $%.2f\n", weeklyWages);
+
+    return 0;
+}
